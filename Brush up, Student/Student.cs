@@ -4,34 +4,9 @@ using System.Text;
 
 namespace Brush_up__Student
 {
-    public class Student
+    public class Student : Person
     {
-        private string _name;
-        private string _address;
         private int _semester;
-        private GenderType _gender;
-
-        public string Name
-        {
-            get => _name;
-            set
-            {
-                if (value.Length < 2)
-                    throw new ArgumentException("Value cannot be less the 2 characters.", nameof(value));
-                _name = value;
-            }
-        }
-
-        public string Address
-        {
-            get => _address;
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException("Value cannot be null or empty.", nameof(value));
-                _address = value;
-            }
-        }
 
         public int Semester
         {
@@ -43,15 +18,19 @@ namespace Brush_up__Student
             }
         }
 
-        public GenderType Gender
+        public override string ToString()
         {
-            get => _gender;
-            set => _gender = value;
+            return base.ToString() + "\nSemester: " + Semester;
         }
-    }
 
-    public enum GenderType
-    {
-        Male, Female
+        public override bool Equals(object obj)
+        {
+            return (float)obj == 10;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

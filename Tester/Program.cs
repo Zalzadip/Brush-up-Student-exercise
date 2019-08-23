@@ -22,6 +22,8 @@ namespace Tester
             student.Address = "Knud";
             student.Semester = 3;
             student.Gender = GenderType.Male;
+
+            Console.WriteLine(student.ToString());
         }
     }
 }
