@@ -16,7 +16,7 @@ namespace Brush_up__Student
             set
             {
                 if (value.Length < 2)
-                    throw new ArgumentException("Value cannot be less the 2 characters.", nameof(value));
+                        throw new ArgumentException("Value cannot be less the 2 characters.", nameof(value));
                 _name = value;
             }
         }

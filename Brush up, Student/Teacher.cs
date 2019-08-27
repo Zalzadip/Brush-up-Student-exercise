@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Brush_up__Student
 {
-    class Teacher: Person
+    public class Teacher: Person
     {
-        private float _salary;
+        private double _salary;
 
-        public float Salary
+        public double Salary
         {
             get => _salary;
             set
